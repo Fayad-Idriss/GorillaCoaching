@@ -2,9 +2,9 @@ CREATE TABLE Clients(
    Id_Client COUNTER,
    last_name VARCHAR(50) NOT NULL,
    first_name VARCHAR(50) NOT NULL,
-   age VARCHAR(50) NOT NULL,
-   weight VARCHAR(50),
-   email VARCHAR(50) NOT NULL,
+   age INT NOT NULL,
+   weight DECIMAL(15,2),
+   email VARCHAR(255) NOT NULL,
    passeword VARCHAR(50) NOT NULL,
    PRIMARY KEY(Id_Client)
 );
@@ -21,7 +21,7 @@ CREATE TABLE Coachs(
 
 CREATE TABLE Messages(
    Id_Message COUNTER,
-   Message VARCHAR(100) NOT NULL,
+   Message TEXT NOT NULL,
    PRIMARY KEY(Id_Message)
 );
 
@@ -40,7 +40,7 @@ CREATE TABLE Reports(
 
 CREATE TABLE Admins(
    Id_Admin COUNTER,
-   email VARCHAR(50) NOT NULL,
+   email VARCHAR(255) NOT NULL,
    password VARCHAR(50) NOT NULL,
    PRIMARY KEY(Id_Admin)
 );
